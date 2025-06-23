@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 
 function Item({ product }) {
   return (
-    <Card className="h-100 shadow-sm">
+    <Card
+      className="h-100 shadow-sm"
+      bg="light"
+      text="dark"
+      border="grey"
+      style={{ width: '18rem' }}
+    >
       <Card.Img
         variant="top"
         src={product.image}
-        style={{ height: '200px', objectFit: 'contain', padding: '1rem' }}
+        style={{ height: '200px', objectFit: 'fill', padding: '1rem' }}
       />
-      <Card.Body className="d-flex flex-column">
+      <Card.Body className="b-flex flex-column">
         <Card.Title className="fs-6">{product.title}</Card.Title>
         <Card.Text className="text-success fw-bold mt-auto">${product.price}</Card.Text>
         <Button

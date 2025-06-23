@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Row, Col, Spinner, Alert } from 'react-bootstrap';
 import Item from '../components/Item';
+import { mockAPI } from '../mockAPI';
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -13,13 +14,14 @@ function ItemListContainer() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const url = categoryId
-          ? `https://fakestoreapi.com/products/category/${categoryId}`
-          : 'https://fakestoreapi.com/products';
+        let data;
 
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Error al cargar productos');
-        const data = await response.json();
+        if (categoryId) {
+          data = await mockAPI.getByCategory(categoryId);
+        } else {
+          data = await mockAPI.getAll();
+        }
+
         setProducts(data);
       } catch (err) {
         setError(err.message);

@@ -4,6 +4,7 @@ import { Card, Button, Spinner, Alert, Badge } from 'react-bootstrap';
 import ItemCount from '../components/ItemCount';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { mockAPI } from '../mockAPI';
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
@@ -16,9 +17,8 @@ function ItemDetailContainer() {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://fakestoreapi.com/products/${itemId}`);
-        if (!response.ok) throw new Error('Producto no encontrado');
-        const data = await response.json();
+        const data = await mockAPI.getById(parseInt(itemId));
+        if (!data) throw new Error('Producto no encontrado');
         setProduct(data);
       } catch (err) {
         setError(err.message);

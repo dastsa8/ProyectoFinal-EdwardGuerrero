@@ -4,10 +4,10 @@ import Item from './Item';
 
 function ItemList({ products }) {
   return (
-    <div className="item-list">
+    <div className="items-container">
       {products.map(product => (
         <div key={product.id} className="item-card">
-          <Link to={`/item/${product.id}`}>
+          <Link to={`/item/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <Item product={product} />
           </Link>
         </div>
