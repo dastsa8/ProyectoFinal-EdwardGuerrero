@@ -1,0 +1,20 @@
+/* Fuerza un tamaño mínimo para las columnas */
+.row-cols-xl-4>* {
+    min-width: 250px;
+    flex: 1 0 21%;
+    /* Asegura que 4 columnas quepan incluso con pocos productos */
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 1199px) {
+    .row-cols-lg-3>* {
+        min-width: 30%;
+    }
+}
+
+/* Ajuste para tablets */
+@media (max-width: 991px) {
+    .row-cols-md-2>* {
+        min-width: 45%;
+    }
+}

@@ -1,6 +1,6 @@
 import { Button, Table, Badge, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useCart } from './CartContext';
 
 function Cart() {
     const { cart, removeFromCart, clearCart, totalPrice } = useCart();

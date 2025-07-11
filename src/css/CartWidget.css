@@ -1,0 +1,27 @@
+.cart-button {
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s ease, background-color 0.3s;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.cart-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon {
+    transition: transform 0.3s ease;
+}
+
+.cart-button:active .cart-icon {
+    transform: rotate(-15deg) scale(0.9);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 0.7rem;
+}

@@ -8,20 +8,20 @@ function Item({ product }) {
       bg="light"
       text="dark"
       border="grey"
-      style={{ width: '18rem' }}
+      style={{ width: '18rem', display: 'flex', flexDirection: 'column', gap: '1rem', flexWrap: 'wrap' }}
     >
       <Card.Img
         variant="top"
         src={product.image}
         style={{ height: '200px', objectFit: 'fill', padding: '1rem' }}
       />
-      <Card.Body className="b-flex flex-column">
+      <Card.Body className="d-flex flex-column justify-content-between flex-grow-1">
         <Card.Title className="fs-6">{product.title}</Card.Title>
         <Card.Text className="text-success fw-bold mt-auto">${product.price}</Card.Text>
         <Button
           as={Link}
           to={`/item/${product.id}`}
-          variant="outline-dark"
+          variant="outline-primary"
           size="sm"
           className="mt-2"
         >

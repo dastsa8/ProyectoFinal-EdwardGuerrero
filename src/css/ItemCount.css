@@ -1,0 +1,41 @@
+.item-count-container {
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.count-buttons button {
+    min-width: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 6px 14px;
+    transition: background-color 0.3s ease;
+}
+
+.count-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.count-display {
+    min-width: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+}
+
+.add-to-cart-btn {
+    width: 160px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+    background-color: #2e31c9;
+}
+
+.add-to-cart-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
