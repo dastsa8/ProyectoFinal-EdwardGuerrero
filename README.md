@@ -31,37 +31,15 @@ Proyecto de tienda online creado con **React** como parte del curso de **React J
 ## 📂 Estructura del proyecto
 
 src/
-├── assets/ # Recursos estáticos (imágenes, íconos, etc.)
 ├── components/ # Componentes funcionales y visuales de la app
-│ ├── Cart.jsx
-│ ├── CartContext.jsx
-│ ├── CartWidget.jsx
-│ ├── Checkout.jsx
-│ ├── Home.jsx
-│ ├── Item.jsx
-│ ├── ItemCount.jsx
-│ ├── ItemDetailContainer.jsx
-│ ├── ItemList.jsx
-│ ├── ItemListContainer.jsx
-│ ├── NavBar.jsx
-│ └── NotFound.jsx
 │
 ├── css/ # Estilos específicos de cada componente
-│ ├── App.css
-│ ├── CartWidget.css
-│ ├── Checkout.css
-│ ├── index.css
-│ ├── ItemCount.css
-│ ├── ItemDetailContainer.css
-│ └── ItemListContainer.css
 │
 ├── firebase/ # Configuración y conexión a Firebase
-│ ├── config.js
-│ └── db.js
 │
-├── App.jsx # Componente raíz de la aplicación
-├── Index.js # Punto de entrada principal
-└── main.jsx # Renderiza la app en el DOM
+├── App.jsx
+├── Index.js
+└── main.jsx 
 ## 📦 Scripts disponibles
 
 | Comando           | Descripción                              |
