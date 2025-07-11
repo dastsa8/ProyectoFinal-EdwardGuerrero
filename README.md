@@ -1,4 +1,4 @@
-ienda React Edward
+🛒 Tienda React Edward
 
 Proyecto de tienda online creado con **React** como parte del curso de **React JS de Coderhouse**. La aplicación permite explorar productos, ver sus detalles, agregarlos al carrito y realizar una simulación de compra. Todo en una interfaz moderna y responsive.
 
